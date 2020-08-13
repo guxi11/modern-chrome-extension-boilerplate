@@ -1,0 +1,39 @@
+{
+  "name": "modern-chrome-extension-boilerplate",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A modern boilerplate to chrome extension with webpack, react, typescript and hot reloading",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+   "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_title": "modern-chrome-extension-boilerplate",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "default_locale": "en",
+  "background": {
+  "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.feishu.cn/*"],
+      "css": ["css/content.css"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "css/content.css",
+    "js/autolink.js"
+  ]
+}

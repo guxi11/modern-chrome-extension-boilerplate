@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "modern-chrome-extension-boilerplate",
+    "description": "The title of the application, displayed in the web store."
+  },
+  "appDesc": {
+      "message": "A modern boilerplate to chrome extension with webpack, react, typescript and hot reloading",
+      "description": "The description of the application, displayed in the web store."
+  }
+}
